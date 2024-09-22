@@ -1,5 +1,5 @@
 autoload -U colors && colors
-autoload -Uz vcs_info
+source ~/.git-prompt.sh
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
@@ -20,15 +20,7 @@ setopt SHARE_HISTORY             # Share history between all sessions.
 alias ls="ls --color=auto"
 alias tree="tree --gitignore"
 
-# configure git info in shell prompt
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-# vcs prompt info should be just the branch name
-zstyle ':vcs_info:git:*' formats '%b'
-
-# prompt configs
-# RPROMPT='${vcs_info_msg_0_}'
+setopt PROMPT_SUBST
 
 C_30='%{'$(print -P '\e[0;30m')'%}'
 C_31='%{'$(print -P '\e[0;31m')'%}'
@@ -39,7 +31,13 @@ C_35='%{'$(print -P '\e[0;35m')'%}'
 C_36='%{'$(print -P '\e[0;36m')'%}'
 C_37='%{'$(print -P '\e[0;37m')'%}'
 NORM='%{'$(print -P '\e[0m')'%}'
-# PROMPT="${C_31}%* %n@%m ${C_35}%2~ ${C_32}▶▸ ${NORM}"
-PROMPT="${C_31}%* ${C_35}%2~ ${C_32}▶▸ ${NORM}"
+
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '[%b] '
+
+export PS1='${C_31}%* ${C_35}%2~ ${C_36}${vcs_info_msg_0_}${C_32}▶▸ ${NORM}'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
