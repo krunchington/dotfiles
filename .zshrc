@@ -42,4 +42,4 @@ NORM='%{'$(print -P '\e[0m')'%}'
 # PROMPT="${C_31}%* %n@%m ${C_35}%2~ ${C_32}▶▸ ${NORM}"
 PROMPT="${C_31}%* ${C_35}%2~ ${C_32}▶▸ ${NORM}"
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
