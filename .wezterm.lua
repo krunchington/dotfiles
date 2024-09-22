@@ -3,6 +3,12 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 if wezterm.target_triple:find("windows") then
+    -- run `wsl -l -v` in terminal, output will look like:
+    --
+    --   NAME      STATE           VERSION
+    -- * Ubuntu    Running         2
+    --
+    -- prepend "WSL:" to the NAME
     config.default_domain = 'WSL:Ubuntu'
 end
 
