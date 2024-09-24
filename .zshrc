@@ -1,5 +1,5 @@
 autoload -U colors && colors
-source ~/.git-prompt.sh
+source ~/.zshrc.custom
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
