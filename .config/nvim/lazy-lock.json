@@ -1,5 +1,6 @@
 {
   "cyberdream.nvim": { "branch": "main", "commit": "57fc3af9a8adcf1655fa4e70164bddd2ed898f60" },
+  "gitsigns.nvim": { "branch": "main", "commit": "1ef74b546732f185d0f806860fa5404df7614f28" },
   "lazy.nvim": { "branch": "main", "commit": "460e1cd8f24e364d54543a4b0e83f6f4ec1f65fb" },
   "nvim-treesitter": { "branch": "master", "commit": "6511cd984ab4b21e28f83af488f38dc89c3b0586" }
 }
