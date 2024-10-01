@@ -2,15 +2,17 @@ return {
     {
         "neovim/nvim-lspconfig",
         lazy = false,
+        dependencies = {
+            'hrsh7th/cmp-nvim-lsp',
+        },
         config = function()
+            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
             require('lspconfig').rust_analyzer.setup({
+                capabilities,
                 settings = {
                     ["rust-analyzer"] = {
-                        -- check = {
-                        --     overrideCommand = {"cargo","clippy","--no-deps","--message-format=json"}
-                        -- }
                         checkOnSave = { command = "clippy" }
-
                     }
                 }
             })
