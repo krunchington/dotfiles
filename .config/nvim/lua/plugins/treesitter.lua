@@ -48,13 +48,27 @@ return {
                 textobjects = {
                     select = {
                         enable = true,
-
                         -- Automatically jump forward to textobj, similar to targets.vim
                         lookahead = true,
-                        keymaps = require("mappings").treesitter,
+                        keymaps = require("mappings").treesitter.select,
                     },
+                    swap = {
+                        enable = true,
+                        swap_next = require("mappings").treesitter.swap.next,
+                        swap_previous = require("mappings").treesitter.swap.prev,
+                    },
+                    move = {
+                        enable = true,
+                        set_jumps = true,
+                        goto_next_start = require("mappings").treesitter.move.goto_next_start,
+                        goto_next_end = require("mappings").treesitter.move.goto_next_end,
+                        goto_previous_start = require("mappings").treesitter.move.goto_previous_start,
+                        goto_previous_end = require("mappings").treesitter.move.goto_previous_end,
+                    }
                 },
             })
+            local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
+            require("mappings").treesitter.repeat_move(ts_repeat_move)
         end,
     },
 }
