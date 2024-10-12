@@ -108,7 +108,7 @@ api.telescope = function(telescope)
 end
 
 api.treesitter = {
-    motions = {
+    select = {
         ["a="] = { query = "@assignment.outer", desc = "Select outer part of an assignment" },
         ["i="] = { query = "@assignment.inner", desc = "Select inner part of an assignment" },
         ["l="] = { query = "@assignment.lhs", desc = "Select left hand side of an assignment" },
