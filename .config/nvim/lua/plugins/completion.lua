@@ -29,7 +29,7 @@ return {
                     completeopt = 'menu,menuone,noinsert' 
                 },
                 -- :help ins-completion
-                mapping = cmp.mapping.preset.insert(require("mappings").cmp(cmd)),
+                mapping = cmp.mapping.preset.insert(require("mappings").cmp(cmp)),
                 sources = {
                     { name = 'nvim_lsp' },
                     { name = 'path' },
