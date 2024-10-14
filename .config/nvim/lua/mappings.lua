@@ -210,4 +210,8 @@ api.treesitter = {
     end
 }
 
+api.neotree = function()
+    vim.keymap.set("n", "\\", "<cmd>Neotree reveal<CR>")
+end
+
 return api
