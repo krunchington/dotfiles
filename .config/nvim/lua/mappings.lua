@@ -112,8 +112,9 @@ api.gitsigns = function(gitsigns, buffer)
 end
 
 api.telescope = function(telescope)
-    vim.keymap.set('n', '<leader>ff', telescope.find_files, {})
-    vim.keymap.set('n', '<leader>fg', telescope.git_files, {})
+    vim.keymap.set('n', '<leader>ff', telescope.git_files, {})
+    vim.keymap.set('n', '<leader>fg', telescope.live_grep, {})
+    vim.keymap.set('n', '<leader>fb', telescope.buffers, {})
     vim.keymap.set('n', '<leader>fw', function()
         local word = vim.fn.expand("<cword>")
         telescope.grep_string({ search = word })

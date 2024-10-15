@@ -8,9 +8,12 @@ return {
         },
         config = function()
             require("lualine").setup({
-            --     sections = {
-            --         lualine_y = {"require'lsp-status'.status()"}
-            --     }
+                extensions = {
+                    { 
+                        filetypes = {"neo-tree"}, 
+                        sections = {} 
+                    },
+                },
             })
         end
     },

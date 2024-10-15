@@ -31,3 +31,8 @@ to make zsh your default shell.  Add any custom zsh commands to `~/.zshrc.custom
 ## Setting up Nvim
 
 https://github.com/neovim/neovim/blob/master/INSTALL.md
+
+## Other Dependencies
+
+rust: https://www.rust-lang.org/tools/install
+ripgrep: https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation
