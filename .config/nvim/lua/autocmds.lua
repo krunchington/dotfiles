@@ -6,17 +6,17 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
 })
 local api = {}
-api.lsp = function(client)
+api.lsp = function(client, buffer)
     if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
         local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
         vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
-            buffer = event.buf,
+            buffer = buffer,
             group = highlight_augroup,
             callback = vim.lsp.buf.document_highlight,
         })
 
         vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
-            buffer = event.buf,
+            buffer = buffer,
             group = highlight_augroup,
             callback = vim.lsp.buf.clear_references,
         })

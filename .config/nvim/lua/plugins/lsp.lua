@@ -22,7 +22,7 @@ return {
                     local telescope = require('telescope.builtin')
                     local client = vim.lsp.get_client_by_id(event.data.client_id)
                     require("mappings").lsp(telescope, event.buf, client)
-                    require("autocmds").lsp(client)
+                    require("autocmds").lsp(client, event.buf)
                 end
             })
         end
