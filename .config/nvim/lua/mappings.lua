@@ -212,7 +212,10 @@ api.treesitter = {
 }
 
 api.neotree = function()
-    vim.keymap.set("n", "\\", "<cmd>Neotree reveal<CR>")
+    vim.keymap.set("n", "\\", "<cmd>Neotree toggle<CR>")
+    return {
+        ["Z"] = "expand_all_nodes",
+    }
 end
 
 return api
