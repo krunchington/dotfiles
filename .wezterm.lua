@@ -2,7 +2,14 @@ local wezterm = require 'wezterm'
 
 local config = wezterm.config_builder()
 
-config.default_domain = 'WSL:Ubuntu'
+if wezterm.target_triple:find("windows") then
+    -- run `wsl -l -v` in terminal, output will look like:
+    --   NAME       STATE       VERSION
+    -- * Ubuntu     Running     2
+    --
+    -- prepend "WLS:" to the NAME
+    config.default_domain = 'WSL:Ubuntu'
+end
 
 
 -- cyberdream theme for wezterm
@@ -25,9 +32,11 @@ config.colors = {
     indexed = { [16] = "#ffbd5e", [17] = "#ff6e5e" },
 }
 
+config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+
 config.background = {
     {
-        source = { File= wezterm.home_dir .. '/.wezterm/cyberpunk.jpg' },
+        source = { File= wezterm.home_dir .. '/.wezterm/samurai.png' },
         hsb = {
             brightness = 0.1,
             hue = 1.0,
@@ -36,7 +45,7 @@ config.background = {
     },
     {
         source = { Color='black' },
-        opacity = 0.4,
+        opacity = 0.6,
         width = "100%",
         height = "100%",
     },
