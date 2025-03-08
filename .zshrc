@@ -3,6 +3,8 @@ source ~/.zshrc.custom
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
+export EDITOR='nvim'
+export GIT_EDITOR='nvim'
 
 # history stuff
 export HISTFILE=~/.zsh_history
