@@ -57,8 +57,8 @@ end
 
 api.cmp = function(cmp)
     return {
-        ['<C-n>'] = cmp.mapping.select_next_item(),
-        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<C-n>'] = cmp.mapping.select_next_item({behavior = "Select"}),
+        ['<C-p>'] = cmp.mapping.select_prev_item({behavior = "Select"}),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         --  This will auto-import if your LSP supports it.
