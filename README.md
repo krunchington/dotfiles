@@ -34,7 +34,15 @@ Install zsh using an appropriate package manager for your system, and then run
 ```
 chsh -s $(which zsh)
 ```
-to make zsh your default shell.  Add any custom zsh commands to `~/.zshrc.custom`
+to make zsh your default shell.
+
+Add the customizations from this repo to your .zshrc
+```
+echo "source ~/.config/krunchington/.zshrc.krunchington" >> .zshrc
+```
+And then add any desired customizations to your `.zshrc` file.  Keep order in mind,
+if you wish to customize your prompt for example which is set in the krunchington
+zshrc, do it after you source the krunchington zshrc.
 
 ## Setting up Nvim
 
