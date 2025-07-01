@@ -18,8 +18,15 @@ dotfiles config status.showuntrackedfiles no
 
 https://wezfurlong.org/wezterm/installation.html
 
-If you're on windows, after cloning this repo be sure to copy ~/.wezterm.lua
-from your wsl into your user home directory in windows.
+run
+```
+cp ~/.config/wezterm/wezterm.template.lua ~/.config/wezterm/wezterm.lua
+```
+
+Apply any customizations to wezterm in `~/.config/wezterm/wezterm.lua`
+
+If you're on windows, after cloning this repo be sure to copy your wezterm config
+from your wsl your user home directory in windows.
 
 ## Setting up zsh
 
