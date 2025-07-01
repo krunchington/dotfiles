@@ -27,7 +27,7 @@ return {
             vim.diagnostic.config({
                 float = {border = border},
             })
-            require('lspconfig').rust_analyzer.setup({
+            vim.lsp.config('rust_analyzer',{
                 capabilities = capabilities,
                 handlers = handlers,
                 settings = {
@@ -36,6 +36,7 @@ return {
                     }
                 }
             })
+            vim.lsp.enable('rust_analyzer')
             vim.api.nvim_create_autocmd('LspAttach', {
                 group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
                 callback = function(event)
