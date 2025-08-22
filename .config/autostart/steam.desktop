@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=steam
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Steam
+Name=Steam
+Comment[en_US]=
+Comment=

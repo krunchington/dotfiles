@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=discord
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=discord
+Name=discord
+Comment[en_US]=
+Comment=

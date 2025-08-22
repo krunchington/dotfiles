@@ -3,6 +3,9 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+vim.o.winborder = "rounded"
+vim.o.winblend = 15
+
 vim.opt.showmode = false
 vim.opt.cursorline = true
 vim.opt.number = true
