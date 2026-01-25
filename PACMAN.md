@@ -1,0 +1,44 @@
+output of `pacman -Qe`
+
+
+alsa-utils 1.2.14-1
+arch-wiki-docs 20250801-1
+base 3-2
+bbswitch 0.8-760
+bumblebee 3.2.1-21
+discord 1:0.0.103-1
+gcc 15.1.1+r500+gb1b8d8ce3eea-1
+git 2.50.1-3
+gnome-themes-extra 3.28+r6+g45b1d457-2
+gtk4 1:4.18.6-1
+hyprland 0.50.1-1
+intel-ucode 20250512-1
+kitty 0.42.2-1
+linux 6.15.8.arch1-2
+linux-firmware 20250708-1
+mako 1.10.0-1
+man-db 2.13.1-1
+man-pages 6.15-1
+neovim 0.11.3-1
+networkmanager 1.52.1-1
+noto-fonts 1:2025.08.01-1
+nvidia 575.64.05-3
+nvme-cli 2.15-1
+openssh 10.2p1-2
+pipewire 1:1.4.7-1
+qt5-wayland 5.15.17+kde+r57-1
+sudo 1.9.17.p1-1
+terminus-font 4.49.1-8
+tlp 1.8.0-1
+ttf-nerd-fonts-symbols-mono 3.4.0-1
+uwsm 0.23.0-1
+vi 1:070224-6
+vim 9.1.1552-1
+waybar 0.13.0-3
+wezterm 20240203.110809.5046fc22-2
+wget 1.25.0-2
+which 2.23-1
+wikiman 2.14.1-1
+wireplumber 0.5.10-1
+xf86-video-intel 1:2.99.917+939+g4a64400e-1
+zsh 5.9-5
