@@ -1,0 +1,4 @@
+[bootstrap.packages]
+# MacOs
+"brew:jq" = { os = "macos" }
+"brew-cask:1password-cli" = { os = "macos" }
