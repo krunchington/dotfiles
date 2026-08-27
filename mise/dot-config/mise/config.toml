@@ -13,7 +13,6 @@ tree-sitter = "0.26.13"
 go = { version = "1.27", postinstall = "mise run gopls"}
 rust = { version = "1.98.0", profile = "default" }
 node = { version = "26.8.0", postinstall = "mise run ts-lsp"}
-python = "3.14"
 
 [tasks.gopls]
 description = "Install gopls"

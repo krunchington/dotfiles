@@ -1,0 +1,8 @@
+[tools]
+python = "3.14"
+uv = "0.12.6"
+ruff = "0.16.4"
+
+[tasks.python-lsp]
+description = "Install python lsp"
+run = "uv tool install basedpyright"
