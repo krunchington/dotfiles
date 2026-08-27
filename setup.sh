@@ -34,6 +34,7 @@ if echo $OSTYPE | grep "darwin"; then
 fi
 stow -v -t $HOME --dotfiles -R nvim
 stow -v -t $HOME --dotfiles -R hypr
+stow -v -t $HOME --dotfiles -R git
 
 echo ""
 echo "**************"
