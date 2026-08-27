@@ -7,16 +7,6 @@ local capabilities = require('blink.cmp').get_lsp_capabilities()
 vim.lsp.config('*', {
     capabilities = capabilities,
 })
-vim.lsp.config('rust_analyzer',{
-    settings = {
-        ['rust-analyzer'] = {
-            check = { command = 'clippy' },
-            checkOnSave = true
-        }
-    }
-})
-vim.lsp.enable('ts_ls')
-vim.lsp.enable('rust_analyzer')
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
     callback = function(event)

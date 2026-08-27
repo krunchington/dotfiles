@@ -1,0 +1,6 @@
+[tools]
+node = { version = "26.8.0", postinstall = "mise run ts-lsp"}
+
+[tasks.ts-lsp]
+description = "Install TS LSP"
+run = "npm install -g typescript-language-server typescript@6"
