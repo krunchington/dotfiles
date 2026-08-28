@@ -26,15 +26,12 @@ echo "STOWING DOTFILES"
 echo "****************"
 echo ""
 
-stow -v -t $HOME --dotfiles -R wezterm
-stow -v -t $HOME --dotfiles -R zsh
-stow -v -t $HOME --dotfiles -R mise
+# stow -v -t $HOME --dotfiles -R wezterm
+# stow -v -t $HOME --dotfiles -R hypr
+stow -v -t $HOME --dotfiles -R --no-folding base
 if echo $OSTYPE | grep "darwin"; then
-    stow -v -t $HOME --dotfiles -R mac
+    stow -v -t $HOME --dotfiles -R --no-folding mac
 fi
-stow -v -t $HOME --dotfiles -R nvim
-stow -v -t $HOME --dotfiles -R hypr
-stow -v -t $HOME --dotfiles -R git
 
 echo ""
 echo "**************"
