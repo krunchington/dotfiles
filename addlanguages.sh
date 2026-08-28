@@ -10,7 +10,7 @@ done
 
 for package in "$@"; do
     echo "Installing $package"
-    stow -v -t $HOME --dotfiles -d ./languages -R $package
+    stow -v -t $HOME --no-folding --dotfiles -d ./languages -R $package
 done
 
 echo "Updating mise"
